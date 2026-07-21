@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/nocturne-c29cc64e-3f41-40b5-8358-64260b4a0ea8/styles.css">
+  <script src="_ds/nocturne-c29cc64e-3f41-40b5-8358-64260b4a0ea8/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    :root{
+      --color-bg:#000000;
+      --color-surface:#0f0f11;
+      --color-surface-2:#161619;
+      --color-text:#f3f3f5;
+      --color-divider:rgba(255,255,255,.12);
+      --color-accent:#9d90e6;
+      --color-accent-300:#b8aef0;
+      --color-neutral-100:#f5f5f7;
+      --color-neutral-200:#e4e4ea;
+      --color-neutral-300:#c9c9d1;
+      --color-neutral-400:#a7a7b2;
+      --color-neutral-500:#898994;
+      --color-neutral-600:#66666f;
+      --color-neutral-800:#26262b;
+      --color-neutral-900:#f5f5f7;
+      --font-heading:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+      --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+      --font-heading-weight:600;
+      --sl-hover:rgba(255,255,255,.06);
+      --theme-next-swatch:#d8c9a8;
+      --theme-next-border:rgba(255,255,255,.22);
+    }
+    .sl-theme-t1{
+      --color-bg:#e9e5db;
+      --color-surface:#f2eee6;
+      --color-surface-2:#e0dacb;
+      --color-text:#2c3a3c;
+      --color-divider:rgba(52,72,78,.16);
+      --color-accent:#668f80;
+      --color-accent-300:#4a6670;
+      --color-neutral-100:#2c3a3c;
+      --color-neutral-200:#38474a;
+      --color-neutral-300:#48585a;
+      --color-neutral-400:#61726f;
+      --color-neutral-500:#7f8d86;
+      --color-neutral-600:#9ca99b;
+      --color-neutral-800:#d3d5c4;
+      --color-neutral-900:#2c3a3c;
+      --sl-hover:rgba(52,72,78,.06);
+      --theme-next-swatch:#2f6f57;
+      --theme-next-border:rgba(52,72,78,.28);
+    }
+    .sl-theme-t2{
+      --color-bg:#1a2e29;
+      --color-surface:#213a34;
+      --color-surface-2:#294740;
+      --color-text:#eef4e9;
+      --color-divider:rgba(255,255,255,.12);
+      --color-accent:#a6c36f;
+      --color-accent-300:#c8e39a;
+      --color-neutral-100:#f2f6ec;
+      --color-neutral-200:#e2ecd6;
+      --color-neutral-300:#cdd9be;
+      --color-neutral-400:#a7bd97;
+      --color-neutral-500:#8aa07c;
+      --color-neutral-600:#6d8365;
+      --color-neutral-800:#33514a;
+      --color-neutral-900:#f2f6ec;
+      --sl-hover:rgba(255,255,255,.06);
+      --theme-next-swatch:#ffafcc;
+      --theme-next-border:rgba(255,255,255,.22);
+    }
+    .sl-theme-t3{
+      --color-bg:#eef2fb;
+      --color-surface:#f9fbff;
+      --color-surface-2:#e7edfa;
+      --color-text:#3b3552;
+      --color-divider:rgba(90,80,120,.16);
+      --color-accent:#ff8fb3;
+      --color-accent-300:#c25d84;
+      --color-neutral-100:#3b3552;
+      --color-neutral-200:#4a4463;
+      --color-neutral-300:#565073;
+      --color-neutral-400:#726c90;
+      --color-neutral-500:#938db0;
+      --color-neutral-600:#b3adca;
+      --color-neutral-800:#dbe1f2;
+      --color-neutral-900:#3b3552;
+      --sl-hover:rgba(90,80,120,.06);
+      --theme-next-swatch:#ffd166;
+      --theme-next-border:rgba(90,80,120,.28);
+    }
+    .sl-theme-pop{
+      --color-bg:#1c3d5a;
+      --color-surface:#26547c;
+      --color-surface-2:#2f6491;
+      --color-text:#fcfcfc;
+      --color-divider:rgba(252,252,252,.16);
+      --color-accent:#ffd166;
+      --color-accent-300:#ffdd8a;
+      --color-neutral-100:#fcfcfc;
+      --color-neutral-200:#e8eef4;
+      --color-neutral-300:#cdd9e6;
+      --color-neutral-400:#a8bccf;
+      --color-neutral-500:#8aa2ba;
+      --color-neutral-600:#6a869f;
+      --color-neutral-800:#2f5a80;
+      --color-neutral-900:#fcfcfc;
+      --sl-hover:rgba(252,252,252,.08);
+      --theme-next-swatch:#9d90e6;
+      --theme-next-border:rgba(252,252,252,.22);
+    }
+    body:has(.sl-theme-t1){background:#e9e5db}
+    body:has(.sl-theme-t2){background:#1a2e29}
+    body:has(.sl-theme-t3){background:#eef2fb}
+    body:has(.sl-theme-pop){background:#1c3d5a}
+    .sl-theme-t1 .sl-scroll,.sl-theme-t3 .sl-scroll{scrollbar-color:rgba(60,48,32,.28) transparent}
+    .sl-theme-t1 .sl-scroll::-webkit-scrollbar-thumb,.sl-theme-t3 .sl-scroll::-webkit-scrollbar-thumb{background:rgba(60,48,32,.24)}
+    html,body{height:100%}
+    body{margin:0;overflow:hidden;background:#000;-webkit-font-smoothing:antialiased}
+    .sl-scroll{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
+    .sl-scroll::-webkit-scrollbar{width:8px;height:8px}
+    .sl-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:8px}
+    .sl-scroll::-webkit-scrollbar-track{background:transparent}
+    input[type=number]{-moz-appearance:textfield}
+    input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+    @keyframes slIn{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
+    @keyframes slFade{from{opacity:0}to{opacity:1}}
+    .sl-shell{grid-template-columns:232px minmax(360px,1fr) 340px}
+    .sl-board-cols{flex-direction:row!important;align-items:flex-start}
+    .sl-board-cols>div{flex:1;min-width:0}
+    @media (max-width:1180px){.sl-shell{grid-template-columns:212px minmax(320px,1fr) 312px}}
+    @media (max-width:1000px){.sl-shell{grid-template-columns:196px minmax(300px,1fr) 288px}}
+    .sl-notetable{overflow-x:auto;overflow-y:visible}
+    .sl-notetable::-webkit-scrollbar{height:6px}
+    .sl-lbl{background:transparent;border:none;text-align:center;font-family:var(--font-body);font-size:11.5px;color:var(--color-neutral-300);width:100%;padding:2px 0;border-bottom:1px solid transparent}
+    .sl-lbl:hover{border-bottom-color:var(--color-divider)}
+    .sl-lbl:focus{outline:none;border-bottom-color:var(--color-accent);color:var(--color-text)}
+    .sl-tagchip{position:relative;display:inline-flex}
+    .sl-tagx{opacity:0;transition:opacity .15s ease}
+    .sl-tagchip:hover .sl-tagx{opacity:1}
+    @keyframes tagIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+  </style>
+</helmet>
+<div class="{{ rootClass }}" style="height:100vh;display:flex;flex-direction:column;font-family:var(--font-body);color:var(--color-text)">
+
+  <header style="display:flex;align-items:center;gap:18px;padding:14px 26px;background:var(--color-surface);border-bottom:1px solid var(--color-divider);flex:none">
+    <div style="position:relative">
+      <button onClick="{{ onToggleMenu }}" style="width:34px;height:34px;border-radius:9px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-300);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:var(--sl-hover);color:var(--color-text)">
+        <svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+      </button>
+      <sc-if value="{{ menuOpen }}" hint-placeholder-val="">
+        <div onClick="{{ onCloseMenu }}" style="position:fixed;inset:0;z-index:40"></div>
+        <div style="position:absolute;top:42px;left:0;z-index:41;width:264px;max-height:60vh;overflow-y:auto;background:var(--color-surface);border:1px solid var(--color-divider);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.35);padding:8px;animation:slFade .12s ease">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 4px 8px 8px">
+            <div style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-500)">Saved compositions</div>
+            <button onClick="{{ onOpenSettings }}" style="flex:none;width:26px;height:26px;border-radius:7px;border:none;background:transparent;color:var(--color-neutral-400);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:var(--sl-hover);color:var(--color-text)">
+              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L181,55.14a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L125.16,54.62q-2.16-.06-4.32,0L102.2,39.7a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,68.89,49.09a8,8,0,0,0-3.93,6L62.32,78.81q-1.56,1.49-3,3L35.64,84.44a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06l14.92,18.63q-.06,2.16,0,4.32L20.2,163.28a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.48,1.56,3,3L75,226.86a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49l18.63-14.92q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3l23.72-2.64a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15l-22.6,2.5a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23L146.15,212a8,8,0,0,0-5.48-1.74,73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74l-17.73,14.2a91.57,91.57,0,0,1-15-6.23l-2.5-22.6a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L59.36,175a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L53.13,104.66a91.57,91.57,0,0,1,6.23-15l22.6-2.5a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14,8,8,0,0,0,2.64-5.1l2.51-22.58a91.32,91.32,0,0,1,15-6.23L146.15,44a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0A8,8,0,0,0,165.77,44l17.73-14.19a91.57,91.57,0,0,1,15,6.23l2.5,22.6a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15L235.84,115a8,8,0,0,0-1.74,5.48Z"></path></svg>
+            </button>
+          </div>
+          <sc-if value="{{ noSaved }}" hint-placeholder-val="">
+            <div style="padding:8px 8px 14px;font-size:12px;color:var(--color-neutral-600);font-style:italic">No saved compositions yet</div>
+          </sc-if>
+          <sc-for list="{{ savedList }}" as="r" hint-placeholder-count="3">
+            <div style="display:flex;align-items:center;gap:6px;border-radius:8px" style-hover="background:var(--sl-hover)">
+              <button onClick="{{ r.onLoad }}" style="flex:1;min-width:0;text-align:left;background:none;border:none;padding:8px;cursor:pointer;color:var(--color-text)">
+                <div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</div>
+                <div style="font-size:10.5px;color:var(--color-neutral-500)">{{ r.meta }}</div>
+              </button>
+              <button onClick="{{ r.onDelete }}" style="flex:none;width:26px;height:26px;border-radius:6px;border:none;background:transparent;color:var(--color-neutral-600);cursor:pointer;margin-right:2px" style-hover="background:rgba(224,110,102,.16);color:#e08b84">
+                <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM112,168a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm0-120H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Z"></path></svg>
+              </button>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin-right:6px">
+      <button onClick="{{ onToggleTheme }}" style="width:22px;height:22px;border-radius:7px;padding:0;cursor:pointer;background:var(--theme-next-swatch);border:1px solid var(--theme-next-border)" style-hover="opacity:.85"></button>
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:16px;letter-spacing:-.01em">Scent Factory</span>
+    </div>
+    <div style="width:1px;height:20px;background:var(--color-divider)"></div>
+    <span style="font-size:14px;color:var(--color-neutral-400)">{{ headerName }}</span>
+    <div style="flex:1"></div>
+    <div style="display:flex;gap:20px;align-items:center;margin-right:6px">
+      <div style="text-align:right"><div style="font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-neutral-500)">Total</div><div style="font-size:15px;font-weight:600;font-variant-numeric:tabular-nums">{{ totalWeight }} g</div></div>
+      <div style="text-align:right"><div style="font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-neutral-500)">Materials</div><div style="font-size:15px;font-weight:600;font-variant-numeric:tabular-nums">{{ materialCount }}</div></div>
+      <div style="text-align:right"><div style="font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-neutral-500)">Cost</div><div style="font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--color-accent-300)">{{ totalCost }}</div></div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button onClick="{{ onNew }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--color-neutral-300);background:transparent;border:1px solid var(--color-divider);padding:8px 16px;border-radius:9px" style-hover="background:var(--sl-hover);color:var(--color-text)">New</button>
+      <button onClick="{{ onSave }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0b0b0d;background:var(--color-accent);border:none;padding:8px 18px;border-radius:9px" style-hover="opacity:.9">Save</button>
+    </div>
+  </header>
+
+  <div class="sl-shell" style="flex:1;display:grid;min-height:0">
+
+    <!-- LEFT: Search & add materials -->
+    <aside style="background:transparent;display:flex;flex-direction:column;min-height:0">
+      <div style="padding:20px 18px 14px;flex:none">
+        <div style="display:flex;gap:8px">
+          <div style="position:relative;flex:1">
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="var(--color-neutral-500)" style="position:absolute;left:11px;top:50%;transform:translateY(-50%)"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+            <input class="input" style="padding-left: 32px; padding-right: 40px; border-radius: 10px; background: transparent; border: 1px solid var(--color-divider); text-align: center" placeholder="Search" value="{{ search }}" onInput="{{ onSearch }}">
+            <button onClick="{{ onOpenAdd }}" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 7px; border: none; color: #0b0b0d; cursor: pointer; display: flex; align-items: center; justify-content: center; background-color: #BF7C3849" style-hover="opacity:.9">
+              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+            </button>
+          </div>
+          <button onClick="{{ onOpenEdit }}" style="flex:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-300);cursor:pointer" style-hover="background:var(--sl-hover);color:var(--color-text)">
+            <svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96A16,16,0,0,0,227.31,73.37ZM92.69,208H48V163.31l88-88L180.68,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="sl-scroll" style="flex:1;overflow-y:auto;padding:0 12px 20px">
+        <sc-if value="{{ showResults }}" hint-placeholder-val="">
+          <div style="animation:slFade .15s ease">
+            <div style="font-size:11px;color:var(--color-neutral-500);padding:2px 8px 8px">{{ resultHint }}</div>
+            <sc-for list="{{ results }}" as="ing" hint-placeholder-count="6">
+              <div style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:10px" style-hover="background:var(--sl-hover)">
+                <span style="width:9px;height:9px;border-radius:50%;flex:none;background:{{ ing.color }}"></span>
+                <button onClick="{{ ing.onAdd }}" style="flex:1;min-width:0;background:none;border:none;padding:0;text-align:left;cursor:pointer;color:var(--color-text)">
+                  <div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ing.name }}</div>
+                  <div style="font-size:10.5px;color:var(--color-neutral-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ing.tagline }}</div>
+                </button>
+                <span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-neutral-500);flex:none">{{ ing.noteShort }}</span>
+                <button onClick="{{ ing.onDelete }}" style="flex:none;width:24px;height:24px;border-radius:6px;border:none;background:transparent;color:var(--color-neutral-600);cursor:pointer" style-hover="background:rgba(224,110,102,.16);color:#e08b84">
+                  <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM112,168a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm0-120H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Z"></path></svg>
+                </button>
+              </div>
+            </sc-for>
+            <sc-if value="{{ canCreate }}" hint-placeholder-val="">
+              <button onClick="{{ onCreateFromSearch }}" style="display:flex;align-items:center;gap:8px;width:100%;min-width:0;margin-top:6px;padding:10px;border-radius:10px;border:1px dashed var(--color-divider);background:transparent;color:var(--color-accent-300);cursor:pointer;font-family:var(--font-body);font-size:12.5px" style-hover="background:var(--sl-hover)">
+                <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" style="flex:none"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+                <span style="flex:1;min-width:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Create “{{ search }}”</span>
+              </button>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showEmptyState }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;padding:24px 16px;color:var(--color-neutral-600)">
+            <svg width="26" height="26" viewBox="0 0 256 256" fill="var(--color-neutral-800)"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+            <div style="font-size:12px;line-height:1.5">Search to find a material to add, or tap <span style="color:var(--color-accent-300)">+</span> to create your own</div>
+          </div>
+        </sc-if>
+      </div>
+    </aside>
+
+    <!-- CENTER: Formula canvas -->
+    <main class="sl-scroll" style="overflow-y:auto;padding:30px 34px 60px">
+      <div style="max-width:720px;margin:0 auto">
+        <div style="margin-bottom:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-500)">Composition</div>
+        <input value="{{ formulaName }}" onInput="{{ onFormulaName }}" placeholder="|" aria-label="Composition name" spellcheck="false" style="display: block; width: 100%; box-sizing: border-box; margin: 0 0 6px; padding: 0; border: none; background: transparent; font-family: var(--font-heading); font-weight: 600; font-size: 30px; letter-spacing: -.02em; color: var(--color-text); outline: none; font-style: italic; text-decoration-line: none">
+        <div style="font-size:13px;color:var(--color-neutral-500)">{{ totalWeight }} g batch · {{ materialCount }} materials</div>
+
+        <sc-if value="{{ showAccords }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:22px 0 26px">
+          <sc-if value="{{ noAccords }}" hint-placeholder-val="">
+            <span style="font-size:12px;color:var(--color-neutral-600);font-style:italic">Add related materials to form accords</span>
+          </sc-if>
+          <sc-for list="{{ accords }}" as="ac" hint-placeholder-count="3">
+            <span style="display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:5px 13px;border-radius:20px;background:{{ ac.bg }};color:{{ ac.color }}">
+              <span style="width:7px;height:7px;border-radius:50%;background:{{ ac.dot }}"></span>{{ ac.name }}
+            </span>
+          </sc-for>
+        </div>
+        </sc-if>
+
+        <div style="margin-top:26px">
+        <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
+          <sc-if value="{{ sec.visible }}" hint-placeholder-val="{{ true }}">
+          <section style="margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:9px">
+              <span style="width:8px;height:8px;border-radius:50%;background:{{ sec.color }}"></span>
+              <h6 style="margin:0;font-size:11px;letter-spacing:.06em">{{ sec.label }}</h6>
+              <span style="font-size:11px;color:var(--color-neutral-500)">{{ sec.count }}</span>
+              <div style="flex:1"></div>
+              <span style="font-size:11px;color:var(--color-neutral-500)">{{ sec.pct }}%</span>
+            </div>
+            <div class="sl-notetable" style="border:1px solid var(--color-divider);border-radius:14px;background:var(--color-surface)">
+              <div style="display:grid;grid-template-columns:{{ gridCols }};padding:9px 16px;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500);border-bottom:1px solid var(--color-divider)">
+                <span>Material</span><span style="text-align:right">Weight (g)</span><sc-if value="{{ showCost }}" hint-placeholder-val="{{ true }}"><span style="text-align:right">Cost</span></sc-if><span style="text-align:right">%</span><span></span>
+              </div>
+              <sc-for list="{{ sec.rows }}" as="row" hint-placeholder-count="3">
+                <div style="display:grid;grid-template-columns:{{ gridCols }};align-items:center;padding:9px 16px;border-bottom:1px solid var(--color-divider)" style-hover="background:var(--sl-hover)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="width:8px;height:8px;border-radius:50%;flex:none;background:{{ row.color }}"></span>
+                    <button onClick="{{ row.onOpen }}" style="background:none;border:none;padding:0;cursor:pointer;text-align:left;min-width:0;color:var(--color-text)">
+                      <div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ row.name }}</div>
+                      <div style="font-size:10px;color:var(--color-neutral-500)">{{ row.family }}</div>
+                    </button>
+                    <sc-if value="{{ row.ifraExceed }}" hint-placeholder-val="">
+                      <span style="display:inline-flex;flex:none;color:#e0a04f">
+                        <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M236.8,188.09,149.35,36.22a24,24,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.34,24.34,0,0,0,40.55,224h174.9a24.34,24.34,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"></path></svg>
+                      </span>
+                    </sc-if>
+                  </div>
+                  <div style="text-align:right">
+                    <input type="text" inputmode="decimal" placeholder="0" value="{{ row.weight }}" onInput="{{ row.onWeight }}" style="width:72px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums;background:transparent;border:1px solid transparent;border-radius:7px;color:var(--color-text);padding:4px 8px" style-hover="border-color:var(--color-divider)" style-focus="border-color:var(--color-accent);background:var(--color-surface-2)">
+                  </div>
+                  <sc-if value="{{ showCost }}" hint-placeholder-val="{{ true }}"><div style="text-align:right;font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--color-neutral-400)">{{ row.cost }}</div></sc-if>
+                  <div style="text-align:right;font-size:13px;font-variant-numeric:tabular-nums;color:var(--color-neutral-300)">{{ row.pct }}</div>
+                  <div style="text-align:right">
+                    <button onClick="{{ row.onRemove }}" style="width:26px;height:26px;border-radius:7px;border:none;background:transparent;color:var(--color-neutral-500);cursor:pointer" style-hover="background:rgba(224,110,102,.14);color:#e08b84">
+                      <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM112,168a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm0-120H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Z"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </sc-for>
+              <sc-if value="{{ sec.empty }}" hint-placeholder-val="">
+                <div style="padding:16px;font-size:12px;color:var(--color-neutral-600);text-align:center;font-style:italic">No {{ sec.labelLower }} yet</div>
+              </sc-if>
+            </div>
+          </section>
+          </sc-if>
+        </sc-for>
+        </div>
+
+        <!-- Ingredient board -->
+        <sc-if value="{{ showBoard }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:44px;padding-top:26px;border-top:1px solid var(--color-divider)">
+          <h4 style="margin:0 0 18px;font-size:18px;letter-spacing:-.01em">Ingredient Board</h4><div class="{{ boardWrapClass }}" style="display:flex;flex-direction:column;gap:28px">
+            <sc-for list="{{ boardCols }}" as="col" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+                <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-500)">{{ col.label }}</div>
+                <div style="display:flex;flex-wrap:wrap;gap:14px">
+                  <button onClick="{{ col.onAdd }}" style="width: 104px; height: 104px; border-radius: 12px; border: 1px dashed var(--color-divider); background: transparent; color: var(--color-neutral-500); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font-family: var(--font-body); font-size: 11px; text-align: center" style-hover="border-color:var(--color-accent);color:var(--color-accent-300)">
+                    <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+                    Add note
+                  </button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          
+        </div>
+        </sc-if>
+      </div>
+    </main>
+
+    <!-- RIGHT: Profile -->
+    <aside class="sl-scroll" style="background:var(--color-surface);border-left:1px solid var(--color-divider);overflow-y:auto;padding:24px 22px 60px">
+      <h5 style="margin:0 0 18px;font-size:13px;font-weight:600">Profile</h5>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:26px">
+        <div>
+          <div style="font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500);margin-bottom:10px">Note Balance</div>
+          <div style="position:relative;display:flex;justify-content:center">
+            <svg viewBox="0 0 160 160" style="width:120px;height:120px">
+              <sc-for list="{{ notePie }}" as="s" hint-placeholder-count="3"><path d="{{ s.d }}" fill="{{ s.color }}" onMouseEnter="{{ s.onEnter }}" onMouseLeave="{{ s.onLeave }}" style="cursor:pointer" style-hover="opacity:.82"></path></sc-for>
+              <circle cx="80" cy="80" r="47" fill="var(--color-surface)"></circle>
+            </svg>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div style="font-size:20px;font-weight:600;line-height:1">{{ noteCenterMain }}</div>
+              <div style="font-size:9px;color:var(--color-neutral-500)">{{ noteCenterSub }}</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:5px">
+            <sc-for list="{{ noteLegend }}" as="l" hint-placeholder-count="3">
+              <div style="display:flex;align-items:center;gap:6px;font-size:11px">
+                <span style="width:8px;height:8px;border-radius:2px;background:{{ l.color }}"></span>
+                <span style="flex:1;color:var(--color-neutral-400)">{{ l.label }}</span>
+                <span style="font-variant-numeric:tabular-nums;color:var(--color-neutral-300)">{{ l.pct }}%</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500);margin-bottom:10px">Character</div>
+          <div style="position:relative;display:flex;justify-content:center">
+            <svg viewBox="0 0 160 160" style="width:120px;height:120px">
+              <sc-for list="{{ scentPie }}" as="s" hint-placeholder-count="5"><path d="{{ s.d }}" fill="{{ s.color }}" onMouseEnter="{{ s.onEnter }}" onMouseLeave="{{ s.onLeave }}" style="cursor:pointer" style-hover="opacity:.82"></path></sc-for>
+              <circle cx="80" cy="80" r="47" fill="var(--color-surface)"></circle>
+            </svg>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div style="font-size:14px;font-weight:600;line-height:1.05">{{ scentCenterMain }}</div>
+              <div style="font-size:9px;color:var(--color-neutral-500)">{{ scentCenterSub }}</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:5px">
+            <sc-for list="{{ scentLegend }}" as="l" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;gap:6px;font-size:11px">
+                <span style="width:8px;height:8px;border-radius:2px;background:{{ l.color }}"></span>
+                <span style="flex:1;color:var(--color-neutral-400)">{{ l.label }}</span>
+                <span style="font-variant-numeric:tabular-nums;color:var(--color-neutral-300)">{{ l.pct }}%</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ showScentBars }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-bottom:10px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500)">Scent Profile</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ scentBars }}" as="b" hint-placeholder-count="8">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:4px">
+              <span style="color:var(--color-neutral-300)">{{ b.tag }}</span>
+              <span style="font-variant-numeric:tabular-nums;color:var(--color-neutral-500)">{{ b.pct }}%</span>
+            </div>
+            <div style="height:6px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden">
+              <div style="height:100%;border-radius:6px;width:{{ b.pct }}%;background:{{ b.color }}"></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:26px">
+        <div style="margin-bottom:10px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500)">Notes</div>
+        <textarea ref="{{ notesRef }}" value="{{ notes }}" onInput="{{ onNotes }}" placeholder="Jot down observations, adjustments, or next steps for this composition…" spellcheck="false" style="width:100%;box-sizing:border-box;min-height:72px;overflow:hidden;resize:none;border-radius:12px;border:1px solid var(--color-divider);background:var(--color-surface-2);color:var(--color-text);font-family:var(--font-body);font-size:12.5px;line-height:1.55;padding:12px 13px;outline:none" style-focus="border-color:var(--color-accent)"></textarea>
+      </div>
+      </sc-if>
+    </aside>
+  </div>
+
+  <!-- Edit materials dialog -->
+  <sc-if value="{{ editOpen }}" hint-placeholder-val="">
+    <div onClick="{{ onCloseEdit }}" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;display:grid;place-items:center;padding:24px">
+      <div onClick="{{ stop }}" style="width:min(600px,100%);max-height:84vh;display:flex;flex-direction:column;background:var(--color-surface);border:1px solid var(--color-divider);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.6);animation:slFade .15s ease">
+        <div style="display:flex;align-items:center;gap:10px;padding:20px 22px 14px;border-bottom:1px solid var(--color-divider)">
+          <h4 style="margin:0;font-size:18px">Edit materials</h4>
+          <span style="font-size:12px;color:var(--color-neutral-500)">{{ editCount }}</span>
+          <div style="flex:1"></div>
+          <button onClick="{{ onCloseEdit }}" style="width:32px;height:32px;border-radius:8px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-400);cursor:pointer" style-hover="background:var(--sl-hover)">
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+          </button>
+        </div>
+        <div style="padding:12px 22px;border-bottom:1px solid var(--color-divider)">
+          <div style="position:relative">
+            <svg width="14" height="14" viewBox="0 0 256 256" fill="var(--color-neutral-500)" style="position:absolute;left:11px;top:50%;transform:translateY(-50%)"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+            <input class="input" style="padding-left:32px;border-radius:10px;background:var(--color-surface-2)" placeholder="Search materials to edit" value="{{ editSearch }}" onInput="{{ onEditSearch }}">
+          </div>
+        </div>
+        <div class="sl-scroll" style="flex:1;overflow-y:auto;padding:8px 14px">
+          <sc-for list="{{ editList }}" as="m" hint-placeholder-count="6">
+            <div style="padding:12px 8px;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:9px">
+              <button onClick="{{ m.onToggleExpand }}" style="display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;padding:0;cursor:pointer;color:var(--color-text);text-align:left">
+                <span style="width:10px;height:10px;border-radius:50%;flex:none;background:{{ m.color }}"></span>
+                <span style="flex:1;min-width:0;font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ m.name }}</span>
+                <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" style="flex:none;color:var(--color-neutral-400);transition:transform .15s ease;transform:{{ m.caret }}"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </button>
+              <sc-if value="{{ m.expanded }}" hint-placeholder-val="">
+              <input class="input" style="background:var(--color-surface-2);font-weight:500" value="{{ m.name }}" onInput="{{ m.onName }}" placeholder="Material name">
+              <div style="display:flex;gap:6px">
+                <sc-for list="{{ m.notes }}" as="nc" hint-placeholder-count="4">
+                  <button onClick="{{ nc.onPick }}" style="flex:1;cursor:pointer;font-family:var(--font-body);font-size:11px;padding:6px 4px;border-radius:8px;border:1px solid {{ nc.border }};background:{{ nc.bg }};color:{{ nc.color }}">{{ nc.label }}</button>
+                </sc-for>
+              </div>
+              <div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+                  <sc-for list="{{ m.tagsList }}" as="t" hint-placeholder-count="3">
+                    <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:4px 5px 4px 10px;border-radius:20px;background:color-mix(in srgb,{{ t.color }} 18%,transparent);color:{{ t.color }}">
+                      {{ t.name }}
+                      <button onClick="{{ t.onRemove }}" style="display:flex;width:15px;height:15px;border:none;background:transparent;color:currentColor;cursor:pointer;padding:0;opacity:.7" style-hover="opacity:1">
+                        <svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                      </button>
+                    </span>
+                  </sc-for>
+                  <button onClick="{{ m.onTogglePicker }}" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:4px 11px;border-radius:20px;border:1px dashed var(--color-divider);background:transparent;color:var(--color-neutral-400);cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent);color:var(--color-accent-300)">
+                    <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63ZM84,96A12,12,0,1,1,96,84,12,12,0,0,1,84,96Z"></path></svg>
+                    Add tag
+                  </button>
+                </div>
+                <sc-if value="{{ m.pickerOpen }}" hint-placeholder-val="">
+                  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;padding:9px;border:1px solid var(--color-divider);border-radius:10px;background:var(--color-surface-2)">
+                    <sc-for list="{{ m.availableTags }}" as="a" hint-placeholder-count="8">
+                      <span class="sl-tagchip">
+                        <button onClick="{{ a.onAdd }}" style="font-size:11px;padding:4px 12px;border-radius:20px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-300);cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent);color:var(--color-accent-300)">{{ a.name }}</button>
+                        <button onClick="{{ a.onDelete }}" class="sl-tagx" style="position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:50%;border:none;background:transparent;color:var(--color-neutral-400);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0"><svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button>
+                      </span>
+                    </sc-for>
+                    <sc-if value="{{ notCustomOpen }}" hint-placeholder-val="{{ true }}">
+                      <button onClick="{{ onOpenCustom }}" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:4px 11px;border-radius:20px;border:1px dashed var(--color-accent);background:transparent;color:var(--color-accent-300);cursor:pointer;font-family:var(--font-body);animation:tagIn .18s ease" style-hover="background:var(--sl-hover)">
+                        <svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+                        Add New
+                      </button>
+                    </sc-if>
+                    <sc-if value="{{ customOpen }}" hint-placeholder-val="">
+                      <input value="{{ tagDraft }}" onInput="{{ onTagDraft }}" onKeyDown="{{ m.onCustomKey }}" onBlur="{{ onCloseCustom }}" placeholder="Type a tag, press Enter" autofocus="true" style="min-width:150px;box-sizing:border-box;font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid var(--color-accent);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);outline:none;animation:tagIn .18s ease">
+                    </sc-if>
+                  </div>
+                </sc-if>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <input class="input" type="number" min="0" step="0.1" style="background:var(--color-surface-2);font-size:12.5px" value="{{ m.ifraStr }}" onInput="{{ m.onIfra }}" placeholder="IFRA limit (%)">
+                <input class="input" type="number" min="0" step="0.1" style="background:var(--color-surface-2);font-size:12.5px" value="{{ m.usageStr }}" onInput="{{ m.onUsage }}" placeholder="Recommended usage (%)">
+              </div>
+              <button onClick="{{ m.onDelete }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-400);cursor:pointer;font-family:var(--font-body)" style-hover="background:rgba(224,110,102,.16);color:#e08b84;border-color:transparent">
+                <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM112,168a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm0-120H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Z"></path></svg>
+                Delete material
+              </button>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 22px;border-top:1px solid var(--color-divider)">
+          <button onClick="{{ onAddFromEdit }}" style="display:flex;align-items:center;gap:7px;cursor:pointer;font-family:var(--font-body);font-size:13px;color:var(--color-accent-300);background:transparent;border:1px solid var(--color-divider);padding:8px 14px;border-radius:9px" style-hover="background:var(--sl-hover)">
+            <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+            New material
+          </button>
+          <div style="flex:1"></div>
+          <button onClick="{{ onCloseEdit }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0b0b0d;background:var(--color-accent);border:none;padding:8px 20px;border-radius:9px" style-hover="opacity:.9">Done</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Add material dialog -->
+  <sc-if value="{{ addOpen }}" hint-placeholder-val="">
+    <div onClick="{{ onCloseAdd }}" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;display:grid;place-items:center;padding:24px">
+      <div onClick="{{ stop }}" style="width:min(420px,100%);background:var(--color-surface);border:1px solid var(--color-divider);border-radius:16px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.6);animation:slFade .15s ease">
+        <h4 style="margin:0 0 16px;font-size:18px">New material</h4>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="field"><label>Name</label><input class="input" style="background:var(--color-surface-2)" value="{{ form.name }}" onInput="{{ onFormName }}" placeholder="e.g. Ambrette Seed"></div>
+          <div>
+            <label style="display:block;font-size:12px;margin-bottom:6px;color:var(--color-neutral-400)">Note</label>
+            <div style="display:flex;gap:6px">
+              <sc-for list="{{ noteChoices }}" as="nc" hint-placeholder-count="4">
+                <button onClick="{{ nc.onPick }}" style="flex:1;cursor:pointer;font-family:var(--font-body);font-size:11.5px;padding:8px 4px;border-radius:9px;border:1px solid {{ nc.border }};background:{{ nc.bg }};color:{{ nc.color }}">{{ nc.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div class="field"><label>Olfactive family</label><input class="input" style="background:var(--color-surface-2)" value="{{ form.family }}" onInput="{{ onFormFamily }}" placeholder="e.g. Musky"></div>
+          <div class="field">
+            <label>Tags</label>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px">
+              <sc-for list="{{ formTagsList }}" as="t" hint-placeholder-count="2">
+                <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:4px 5px 4px 10px;border-radius:20px;background:color-mix(in srgb,{{ t.color }} 18%,transparent);color:{{ t.color }}">
+                  {{ t.name }}
+                  <button onClick="{{ t.onRemove }}" style="display:flex;width:15px;height:15px;border:none;background:transparent;color:currentColor;cursor:pointer;padding:0;opacity:.7" style-hover="opacity:1">
+                    <svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                  </button>
+                </span>
+              </sc-for>
+              <sc-if value="{{ formHasTags }}" hint-placeholder-val="">
+                <span style="width:0"></span>
+              </sc-if>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;padding:9px;border:1px solid var(--color-divider);border-radius:10px;background:var(--color-surface-2)">
+              <sc-for list="{{ formAvailTags }}" as="a" hint-placeholder-count="10">
+                <span class="sl-tagchip">
+                  <button onClick="{{ a.onAdd }}" style="font-size:11px;padding:4px 12px;border-radius:20px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-300);cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent);color:var(--color-accent-300)">{{ a.name }}</button>
+                  <button onClick="{{ a.onDelete }}" class="sl-tagx" style="position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:50%;border:none;background:transparent;color:var(--color-neutral-400);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0"><svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></button>
+                </span>
+              </sc-for>
+              <sc-if value="{{ notFormCustomOpen }}" hint-placeholder-val="{{ true }}">
+                <button onClick="{{ onOpenFormCustom }}" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:4px 11px;border-radius:20px;border:1px dashed var(--color-accent);background:transparent;color:var(--color-accent-300);cursor:pointer;font-family:var(--font-body);animation:tagIn .18s ease" style-hover="background:var(--sl-hover)">
+                  <svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+                  Add New
+                </button>
+              </sc-if>
+              <sc-if value="{{ formCustomOpen }}" hint-placeholder-val="">
+                <input value="{{ formTagDraft }}" onInput="{{ onFormTagDraft }}" onKeyDown="{{ onFormCustomKey }}" onBlur="{{ onCloseFormCustom }}" placeholder="Type a tag, press Enter" autofocus="true" style="min-width:150px;box-sizing:border-box;font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid var(--color-accent);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);outline:none;animation:tagIn .18s ease">
+              </sc-if>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="field"><label>IFRA limit (%)</label><input class="input" type="number" min="0" step="0.1" style="background:var(--color-surface-2)" value="{{ form.ifra }}" onInput="{{ onFormIfra }}" placeholder="e.g. 0.4"></div>
+            <div class="field"><label>Recommended usage (%)</label><input class="input" type="number" min="0" step="0.1" style="background:var(--color-surface-2)" value="{{ form.usage }}" onInput="{{ onFormUsage }}" placeholder="e.g. 5"></div>
+          </div>
+          <div class="field">
+            <label>Price</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="position:relative">
+                <span style="position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--color-neutral-500);font-size:13px">$</span>
+                <input class="input" type="number" min="0" step="0.01" style="background:var(--color-surface-2);padding-left:24px" value="{{ form.price }}" onInput="{{ onFormPrice }}" placeholder="0.00">
+              </div>
+              <select class="input" style="background:var(--color-surface-2);cursor:pointer" value="{{ form.priceAmt }}" onChange="{{ onFormPriceAmt }}">
+                <sc-for list="{{ priceAmtOptions }}" as="o" hint-placeholder-count="9">
+                  <option value="{{ o.v }}">{{ o.label }}</option>
+                </sc-for>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:20px">
+          <button onClick="{{ onCloseAdd }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;color:var(--color-neutral-300);background:transparent;border:1px solid var(--color-divider);padding:8px 16px;border-radius:9px" style-hover="background:var(--sl-hover)">Cancel</button>
+          <button onClick="{{ onSubmitAdd }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0b0b0d;background:var(--color-accent);border:none;padding:8px 18px;border-radius:9px" style-hover="opacity:.9">Add material</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Settings dialog -->
+  <sc-if value="{{ settingsOpen }}" hint-placeholder-val="">
+    <div onClick="{{ onCloseSettings }}" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;display:grid;place-items:center;padding:24px">
+      <div onClick="{{ stop }}" style="width:min(420px,100%);background:var(--color-surface);border:1px solid var(--color-divider);border-radius:16px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.6)">
+        <h4 style="margin:0 0 4px;font-size:18px">Settings</h4>
+        <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:16px">Show or hide features across the workspace</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <sc-for list="{{ settingsToggles }}" as="t" hint-placeholder-count="5">
+            <button onClick="{{ t.onToggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:11px 12px;border-radius:10px;border:1px solid var(--color-divider);background:transparent;color:var(--color-text);cursor:pointer;font-family:var(--font-body);font-size:13px" style-hover="background:var(--sl-hover)">
+              <span>{{ t.label }}</span>
+              <span style="flex:none;width:38px;height:22px;border-radius:20px;background:{{ t.track }};position:relative;transition:background .15s ease">
+                <span style="position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .15s ease;transform:{{ t.knob }}"></span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+        <div style="margin-top:18px">
+          <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-500);margin-bottom:8px">Currency</div>
+          <div style="display:flex;gap:6px">
+            <sc-for list="{{ currencyOptions }}" as="c" hint-placeholder-count="3">
+              <button onClick="{{ c.onPick }}" style="flex:1;cursor:pointer;font-family:var(--font-body);font-size:12.5px;padding:9px 4px;border-radius:9px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-top:20px">
+          <button onClick="{{ onCloseSettings }}" style="cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:600;color:#0b0b0d;background:var(--color-accent);border:none;padding:8px 18px;border-radius:9px" style-hover="opacity:.9">Done</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Ingredient detail slide-over -->
+  <sc-if value="{{ detail }}" hint-placeholder-val="">
+    <div onClick="{{ onCloseDetail }}" style="position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40"></div>
+    <div class="sl-scroll" style="position:fixed;top:0;right:0;bottom:0;width:380px;background:var(--color-surface);border-left:1px solid var(--color-divider);box-shadow:-8px 0 40px rgba(0,0,0,.5);z-index:50;overflow-y:auto;padding:26px;animation:slIn .22s ease">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:11px;min-width:0">
+          <span style="width:13px;height:13px;border-radius:50%;flex:none;background:{{ detail.color }}"></span>
+          <div style="min-width:0">
+            <h4 style="margin:0;font-size:19px;letter-spacing:-.01em">{{ detail.name }}</h4>
+            <div style="font-size:12px;color:var(--color-neutral-500)">{{ detail.family }} · {{ detail.note }}</div>
+          </div>
+        </div>
+        <button onClick="{{ onCloseDetail }}" style="flex:none;width:32px;height:32px;border-radius:8px;border:1px solid var(--color-divider);background:transparent;color:var(--color-neutral-400);cursor:pointer" style-hover="background:var(--sl-hover)">
+          <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" style="margin:auto"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+        </button>
+      </div>
+
+      <p style="margin:16px 0 18px;font-size:13px;line-height:1.6;color:var(--color-neutral-300)">{{ detail.desc }}</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
+        <sc-for list="{{ detail.tags }}" as="t" hint-placeholder-count="5">
+          <span style="font-size:11px;padding:4px 10px;border-radius:20px;background:var(--sl-hover);color:var(--color-neutral-300)">{{ t }}</span>
+        </sc-for>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px">
+        <sc-for list="{{ detail.specs }}" as="sp" hint-placeholder-count="6">
+          <div style="border:1px solid var(--color-divider);border-radius:10px;padding:9px 11px">
+            <div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-neutral-500)">{{ sp.k }}</div>
+            <div style="font-size:13px;font-weight:500;margin-top:2px">{{ sp.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <sc-for list="{{ detail.relations }}" as="rel" hint-placeholder-count="4">
+        <div style="margin-bottom:16px">
+          <h6 style="margin:0 0 8px;font-size:11px;color:{{ rel.color }}">{{ rel.title }}</h6>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <sc-for list="{{ rel.items }}" as="it" hint-placeholder-count="3">
+              <span style="font-size:12px;padding:5px 11px;border-radius:9px;border:1px solid var(--color-divider);color:var(--color-neutral-300)">{{ it }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+
+      <button onClick="{{ detail.onAdd }}" style="width:100%;margin-top:8px;cursor:pointer;font-family:var(--font-body);font-size:14px;font-weight:600;color:#0b0b0d;background:var(--color-accent);border:none;padding:11px;border-radius:10px" style-hover="opacity:.9">Add to formula</button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:940},&quot;showAccords&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;},&quot;showScentBars&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;},&quot;showCost&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;},&quot;showBoard&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Display&quot;},&quot;boardColumns&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Stacked rows&quot;,&quot;options&quot;:[&quot;Stacked rows&quot;,&quot;Side by side&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.notesRef = React.createRef();
+    this.DEFAULTS = this.buildLibrary();
+    this.ACCORDS = [
+      {id:'creamy', name:'Creamy Gourmand', set:['ethylmaltol','vanillin','deltadeca'], th:2, hue:'#d6b98a'},
+      {id:'woody', name:'Woody Accord', set:['isoe','cashmeran','cedramber','sandalwood'], th:2, hue:'#b298d6'},
+      {id:'marine', name:'Marine Accord', set:['melonal','helional','calone'], th:2, hue:'#7fb0ba'},
+      {id:'amber', name:'Amber Accord', set:['ambroxan','vanillin','benzoin','labdanum'], th:2, hue:'#d6a45c'},
+      {id:'powder', name:'Powdery Accord', set:['heliotropin','coumarin','musk'], th:2, hue:'#b8a8c8'},
+      {id:'floral', name:'White Floral', set:['jasmine','osmanthus','hedione','rose'], th:2, hue:'#cf94b6'},
+    ];
+    this.CHARS = ['Woody','Musky','Amber','Creamy','Sweet','Vanilla','Marine','Ozonic','Green','Fresh','Fruity','Peach','Floral','Powdery','Aldehydic','Metallic','Balsamic','Spicy','Citrus','Transparent','Coconut'];
+    this.TAGCOLOR = {Woody:'#a98cd6',Musky:'#bda99a',Amber:'#d6a45c',Creamy:'#dcc596',Sweet:'#cf9cb4',Vanilla:'#dcb878',Gourmand:'#cf9880',Marine:'#7fb0ba',Ozonic:'#93b4c4',Aquatic:'#7fb0ba',Green:'#8fae7f',Fresh:'#9fc0a3',Fruity:'#cf94a4',Peach:'#e0a67e',Citrus:'#d3c06a',Floral:'#c893b0',Powdery:'#b8a8c8',Aldehydic:'#adb2c8',Metallic:'#9ea0a8',Balsamic:'#b88f66',Spicy:'#c67e58',Transparent:'#a8b0c0',Coconut:'#dcc79e',Lactonic:'#d3bc86',Cedar:'#b8986a',Tropical:'#7fb58f',Watermelon:'#8fc095',Modern:'#a98cd6',Almond:'#d0b482'};
+    this.MATCOLORS=['#a98cd6','#d6a45c','#cf94b6','#7fb0ba','#8fae7f','#dcb878','#cf9880','#bda99a'];
+    this.NOTE_CLASSES=['Top','Middle','Base'];
+
+    let rid=0;
+    const mk=(id,weight)=>({rid:++rid, id, weight, override:null});
+    this.state = {
+      name:'',
+      search:'',
+      notes:'',
+      theme:this.load('sillage_theme_v1','night'),
+      settings:this.load('sillage_settings_v1',{showCost:true,currency:'USD',showBoard:true,showNotes:true,showAccords:true,showScent:true}),
+      settingsOpen:false,
+      customTags:this.load('sillage_customtags_v1',[]),
+      hiddenTags:this.load('sillage_hiddentags_v1',[]),
+      saved:this.load('sillage_recipes_v1',[]),
+      menuOpen:false,
+      editExpanded:{},
+      detailId:null,
+      addOpen:false,
+      editOpen:false,
+      form:{name:'',note:'Top',family:'',tags:[],ifra:'',usage:'',price:'',priceAmt:'5'},
+      custom:this.load('sillage_custom_v1',[]),
+      deleted:this.load('sillage_deleted_v1',[]),
+      overrides:this.load('sillage_overrides_v1',{}),
+      board:this.loadBoard(),
+      rows:[],
+    };
+  }
+
+  load(key,fb){ try{ const v=localStorage.getItem(key); return v?JSON.parse(v):fb; }catch(e){ return fb; } }  save(key,val){ try{ localStorage.setItem(key,JSON.stringify(val)); }catch(e){} }
+  uid(){ return 'b'+Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+
+  loadBoard(){
+    const saved=this.load('sillage_board_v1',null);
+    if(Array.isArray(saved)) return saved;
+    if(saved && typeof saved==='object'){ const flat=[]; Object.values(saved).forEach(a=>Array.isArray(a)&&a.forEach(b=>flat.push(b))); return flat; }
+    return [];
+  }
+
+  buildLibrary(){
+    const L = (id,name,note,family,tags,o)=>Object.assign({id,name,note,family,tags,
+      cas:o.cas||'—',supplier:o.supplier||'Firmenich',dilution:o.dilution??100,ifra:o.ifra??null,
+      cost:o.cost??1.2,density:o.density??0.95,strength:o.strength??6,tenacity:o.tenacity??6,
+      diffusion:o.diffusion??6,color:o.color,desc:o.desc,rel:o.rel||null},{});
+    return [
+      L('bergamot','Bergamot Calabria','Top','Citrus',['Citrus','Fresh','Green'],{cas:'8007-75-8',supplier:'Robertet',dilution:100,ifra:0.4,cost:0.9,density:0.87,strength:5,diffusion:8,tenacity:2,color:'#d3c06a',desc:'Bright, juicy top-note citrus with a soft floral facet. Lifts an opening instantly but flashes off fast.',rel:{pairs:['Neroli','Lavender','Iso E Super'],ratios:['3–8% of top'],replace:['Lemon','Petitgrain']}}),
+      L('lemon','Lemon Sfumatrice','Top','Citrus',['Citrus','Fresh','Clean'],{cas:'8008-56-8',dilution:100,ifra:2,cost:0.6,density:0.85,strength:5,diffusion:8,tenacity:1,color:'#d8c85f',desc:'Zesty, cut-glass citrus. The most volatile of the openers — use to sharpen a top.'}),
+      L('pinkpepper','Pink Pepper','Top','Spicy',['Spicy','Fresh','Fruity','Rosy'],{cas:'68917-52-2',dilution:10,ifra:null,cost:2.1,density:0.9,strength:6,diffusion:7,tenacity:3,color:'#c67e58',desc:'Dry, rosy-peppery sparkle. A modern top-note signature that bridges citrus and heart.',rel:{pairs:['Bergamot','Rose','Cardamom'],ratios:['1–4%'],replace:['Black Pepper']}}),
+      L('cardamom','Cardamom CO2','Top','Spicy',['Spicy','Fresh','Green','Aromatic'],{cas:'8000-66-6',dilution:10,cost:3.4,density:0.93,strength:6,diffusion:6,tenacity:3,color:'#b8986a',desc:'Cool, camphoraceous-green spice. Adds lift and an airy aromatic edge.'}),
+      L('aldc12','Aldehyde C-12 MNA','Top','Aldehydic',['Aldehydic','Fresh','Metallic','Clean'],{cas:'110-41-8',dilution:10,ifra:null,cost:1.1,density:0.83,strength:8,diffusion:9,tenacity:3,color:'#adb2c8',desc:'Waxy-metallic aldehyde that adds soapy sparkle and enormous lift. A little goes a long way.'}),
+      L('melonal','Melonal','Top','Marine',['Marine','Ozonic','Watermelon','Fresh','Green','Aquatic'],{cas:'106-72-9',dilution:1,ifra:null,cost:1.4,density:0.85,strength:8,diffusion:9,tenacity:2,color:'#8fc095',desc:'Cucumber-melon aldehyde — cool, watery, green. The backbone of a modern marine top.',rel:{pairs:['Calone','Helional','Cucumber'],ratios:['0.5–2%'],conflicts:['Heavy gourmands']}}),
+      L('calone','Calone 1951','Top','Marine',['Marine','Ozonic','Aquatic','Fresh','Watermelon'],{cas:'28940-11-6',dilution:1,ifra:null,cost:2.6,density:1.05,strength:9,diffusion:8,tenacity:4,color:'#7fb0ba',desc:'The iconic watery-ozonic material. Sea-breeze and melon rind; overdoses read synthetic.',rel:{pairs:['Melonal','Helional'],ratios:['0.3–1.5%'],conflicts:['Vanillin','Ethyl Maltol']}}),
+      L('hexenol','cis-3-Hexenol','Top','Green',['Green','Fresh','Leafy','Natural'],{cas:'928-96-1',dilution:1,cost:0.8,density:0.85,strength:7,diffusion:8,tenacity:2,color:'#8fae7f',desc:'Crushed-leaf green. Instantly natural and dewy; extremely potent, dose in trace.'}),
+      L('rose','Rose Absolute','Middle','Floral',['Floral','Rosy','Honey','Rich'],{cas:'8007-01-0',dilution:20,ifra:0.2,cost:38,density:0.96,strength:7,tenacity:6,diffusion:6,color:'#c893b0',desc:'Deep, honeyed damask rose. The queen of the heart — anchors and rounds florals.'}),
+      L('jasmine','Jasmine Sambac','Middle','Floral',['Floral','White','Indolic','Rich'],{cas:'8022-96-6',dilution:10,ifra:0.7,cost:44,density:0.97,strength:8,tenacity:6,diffusion:7,color:'#dcb878',desc:'Lush, slightly animalic white floral. Adds body and a living, breathing heart.'}),
+      L('osmanthus','Osmanthus Absolute','Middle','Floral',['Floral','Peach','Fruity','Leather','Apricot'],{cas:'68917-05-5',dilution:10,cost:52,density:0.98,strength:6,tenacity:6,diffusion:5,color:'#e0a67e',desc:'Apricot-leather floral with a suede facet — bridges fruit, flower and skin beautifully.',rel:{pairs:['Delta Decalactone','Rose','Ionone'],ratios:['2–6%']}}),
+      L('ethylmaltol','Ethyl Maltol','Middle','Gourmand',['Sweet','Gourmand','Fruity','Caramel'],{cas:'4940-11-8',dilution:10,ifra:null,cost:0.7,density:1.1,strength:9,tenacity:5,diffusion:7,color:'#cf9cb4',desc:'Burnt-sugar, cotton-candy sweetness. Wildly powerful — the signature of modern gourmands.',rel:{pairs:['Vanillin','Delta Decalactone','Heliotropin'],ratios:['2–8%'],conflicts:['Marine notes'],replace:['Maltol','Furaneol']}}),
+      L('deltadeca','Delta Decalactone','Middle','Lactonic',['Coconut','Milky','Creamy','Peach','Tropical','Lactonic'],{cas:'705-86-2',dilution:10,ifra:null,cost:1.6,density:0.94,strength:7,tenacity:6,diffusion:5,color:'#dcc596',desc:'Creamy coconut-peach lactone. The heart of a milky, custardy accord.',rel:{pairs:['Ethyl Maltol','Vanillin','Osmanthus','Sandalwood'],ratios:['4–12%'],replace:['Gamma Undecalactone','Delta Dodecalactone'],softens:['Ethyl Maltol']}}),
+      L('heliotropin','Heliotropin','Base','Powdery',['Powdery','Almond','Sweet','Floral'],{cas:'120-57-0',dilution:20,ifra:null,cost:1.3,density:1.1,strength:6,tenacity:7,diffusion:5,color:'#b8a8c8',desc:'Soft almond-cherry powder. Rounds sweetness and adds a heliotrope-marzipan pillow.',rel:{pairs:['Vanillin','Coumarin','Musk'],ratios:['2–8%']}}),
+      L('vanillin','Vanillin','Base','Gourmand',['Sweet','Vanilla','Gourmand','Balsamic'],{cas:'121-33-5',dilution:10,ifra:null,cost:0.5,density:1.06,strength:8,tenacity:8,diffusion:5,color:'#dcb878',desc:'The vanilla molecule — warm, sweet, balsamic. Anchors gourmand and amber bases.',rel:{pairs:['Ethyl Maltol','Heliotropin','Sandalwood','Benzoin'],ratios:['3–10%'],replace:['Ethyl Vanillin','Vanilla Absolute']}}),
+      L('coumarin','Coumarin','Base','Balsamic',['Sweet','Balsamic','Hay','Almond'],{cas:'91-64-5',dilution:10,ifra:null,cost:0.6,density:0.94,strength:6,tenacity:8,diffusion:4,color:'#d0b482',desc:'New-mown hay and warm almond — the soul of a fougère and a soft powdery fixative.'}),
+      L('isoe','Iso E Super','Base','Woody',['Woody','Amber','Cedar','Musky','Transparent','Modern'],{cas:'54464-57-2',dilution:100,ifra:null,cost:0.8,density:0.95,strength:5,tenacity:8,diffusion:9,color:'#a98cd6',desc:'Smooth, transparent cedar-amber that expands and diffuses. The great modern base-blender — velvety at any dose.',rel:{pairs:['Cashmeran','Cedramber','Sandalwood','Vetiver'],ratios:['10–40%'],softens:['sharp materials'],replace:['Cedramber','Timbersilk']}}),
+      L('cashmeran','Cashmeran','Base','Woody',['Woody','Musky','Amber','Velvet'],{cas:'33704-61-9',dilution:20,ifra:null,cost:1.4,density:0.99,strength:7,tenacity:8,diffusion:7,color:'#9d8ac8',desc:'A plush musky-woody-amber with a resinous glow. Adds a cashmere hum under any accord.',rel:{pairs:['Iso E Super','Cedramber','Ambroxan'],ratios:['2–10%']}}),
+      L('cedramber','Cedramber','Base','Woody',['Woody','Amber','Cedar','Dry','Transparent'],{cas:'67874-81-1',dilution:20,cost:1.1,density:0.98,strength:6,tenacity:8,diffusion:7,color:'#b8986a',desc:'Dry, ambery cedar. Extends and sharpens a woody base with excellent tenacity.'}),
+      L('sandalwood','Sandalwood 803','Base','Woody',['Woody','Creamy','Milky','Soft','Sweet'],{cas:'—',dilution:100,cost:2.8,density:0.96,strength:6,tenacity:8,diffusion:5,color:'#d6a45c',desc:'Creamy, lactonic sandalwood base. Bridges woods and gourmand with a milky warmth.',rel:{pairs:['Delta Decalactone','Vanillin','Iso E Super'],ratios:['5–15%']}}),
+      L('ambroxan','Ambroxan','Base','Amber',['Amber','Woody','Musky','Salty','Dry','Modern'],{cas:'6790-58-5',dilution:10,ifra:null,cost:2.2,density:0.99,strength:7,tenacity:9,diffusion:8,color:'#d6a45c',desc:'Dry, mineral-ambergris warmth with huge projection and tenacity. A modern radiant fixative.',rel:{pairs:['Iso E Super','Cashmeran','Vanillin'],ratios:['1–6%'],boosts:['diffusion']}}),
+      L('benzoin','Benzoin Siam','Base','Balsamic',['Balsamic','Sweet','Vanilla','Resinous'],{cas:'9000-05-9',dilution:50,cost:1.0,density:1.1,strength:6,tenacity:9,diffusion:3,color:'#b88f66',desc:'Warm, vanillic-resinous balsam. A sweet fixative that glues amber and gourmand bases.'}),
+      L('musk','Galaxolide Musk','Base','Musky',['Musky','Clean','Powdery','Soft','Sweet'],{cas:'1222-05-5',dilution:50,ifra:null,cost:0.6,density:1.0,strength:5,tenacity:9,diffusion:6,color:'#bda99a',desc:'Clean, slightly sweet white musk. Rounds, fixes and adds a soft skin-like halo.',rel:{pairs:['Heliotropin','Vanillin','Iso E Super'],ratios:['5–20%']}}),
+      L('hedione','Hedione','Middle','Floral',['Floral','Fresh','Jasmine','Transparent'],{cas:'24851-98-7',dilution:100,ifra:null,cost:0.7,density:1.0,strength:4,tenacity:5,diffusion:8,color:'#a8b0c0',desc:'Radiant, watery jasmine-air. A transparent diffuser that lifts and connects top to heart.',rel:{pairs:['Jasmine','Bergamot','Iso E Super'],ratios:['5–25%'],boosts:['diffusion','radiance']}}),
+      L('helional','Helional','Middle','Marine',['Marine','Green','Fresh','Ozonic','Floral'],{cas:'1205-17-0',dilution:10,ifra:null,cost:1.3,density:1.02,strength:6,tenacity:5,diffusion:7,color:'#93b4c4',desc:'Green-marine, cyclamen-watery bridge. Connects a fresh top into a floral-aquatic heart.',rel:{pairs:['Melonal','Calone','Hedione'],ratios:['1–5%']}}),
+      L('labdanum','Labdanum','Base','Amber',['Amber','Balsamic','Leather','Sweet'],{cas:'8016-26-0',dilution:20,cost:1.9,density:1.0,strength:7,tenacity:9,diffusion:4,color:'#b88f66',desc:'Sticky, leathery-ambery resin — the labdanum heart of every classic amber accord.'}),
+    ];
+  }
+
+  library(){ const del=this.state.deleted; const ov=this.state.overrides||{}; const ap=m=>{ const o=ov[m.id]; return o?{...m,...o}:m; }; return this.state.custom.map(ap); }
+  ing(id){ return this.library().find(x=>x.id===id); }
+  fmt(n){ return Math.round(n*10)/10; }
+  // cost of the amount of this material used, from its price-per-volume ($/priceAmt ml)
+  rowCost(ing,weight){ const p=ing.price, a=ing.priceAmt; if(p==null||!a||!weight) return null; return weight*(p/a); }
+
+  onSearch = e => this.setState({search:e.target.value});
+  onWeight = (rid,e) => { const raw=e.target.value; const v=raw===''?0:Math.max(0,parseFloat(raw)||0); this.setState(s=>({rows:s.rows.map(r=>r.rid===rid?{...r,weight:v,weightRaw:raw}:r)})); };
+  onRemove = rid => this.setState(s=>({rows:s.rows.filter(r=>r.rid!==rid)}));
+  addIng = id => this.setState(s=>({rows:[...s.rows,{rid:Date.now()+Math.random(),id,weight:5,override:null}]}));
+  openDetail = id => this.setState({detailId:id});
+  closeDetail = () => this.setState({detailId:null});
+  stop = e => e.stopPropagation();
+
+  deleteMaterial = id => {
+    this.setState(s=>{
+      const isDefault=this.DEFAULTS.some(x=>x.id===id);
+      if(isDefault){ const deleted=[...s.deleted,id]; this.save('sillage_deleted_v1',deleted); return {deleted}; }
+      const custom=s.custom.filter(x=>x.id!==id); this.save('sillage_custom_v1',custom); return {custom};
+    });
+  };
+
+  openEdit = () => this.setState({editOpen:true, addOpen:false, editSearch:''});
+  closeEdit = () => this.setState({editOpen:false});
+  editMaterial = (id,patch) => this.setState(s=>{ const overrides={...s.overrides,[id]:{...s.overrides[id],...patch}}; this.save('sillage_overrides_v1',overrides); return {overrides}; });
+  toggleTagPicker = id => this.setState(s=>({tagPickerId:s.tagPickerId===id?null:id, tagDraft:'', customOpen:false}));
+  toggleEditExpand = id => this.setState(s=>({editExpanded:{...s.editExpanded,[id]:!s.editExpanded[id]}}));
+  addTag = (id,tag,cur) => { if(cur.includes(tag)) return; this.editMaterial(id,{tags:[...cur,tag]}); };
+  removeTag = (id,tag,cur) => this.editMaterial(id,{tags:cur.filter(t=>t!==tag)});
+  setTagDraft = e => this.setState({tagDraft:e.target.value});
+  openCustom = () => this.setState({customOpen:true, tagDraft:''});
+  closeCustom = () => this.setState({customOpen:false});
+  registerCustomTag = v => this.setState(s=>{ let customTags=s.customTags, hiddenTags=s.hiddenTags, changed=false; if(hiddenTags.includes(v)){ hiddenTags=hiddenTags.filter(t=>t!==v); changed=true; } if(!this.TAGCOLOR[v] && !customTags.includes(v)){ customTags=[...customTags,v]; changed=true; } if(!changed) return null; this.save('sillage_customtags_v1',customTags); this.save('sillage_hiddentags_v1',hiddenTags); return {customTags,hiddenTags}; });
+  deletePaletteTag = v => this.setState(s=>{ if(!this.TAGCOLOR[v]){ const customTags=s.customTags.filter(t=>t!==v); this.save('sillage_customtags_v1',customTags); return {customTags}; } const hiddenTags=[...s.hiddenTags,v]; this.save('sillage_hiddentags_v1',hiddenTags); return {hiddenTags}; });
+  addCustomTag = () => { const v=(this.state.tagDraft||'').trim(); if(!v) return; this.registerCustomTag(v); this.setState({tagDraft:''}); };
+
+  // add-material dialog
+  openAdd = (name) => this.setState({addOpen:true, editOpen:false, form:{name:name||'',note:'Top',family:'',tags:[],ifra:'',usage:'',price:'',priceAmt:'5'}, formTagDraft:'', formCustomOpen:false});
+  closeAdd = () => this.setState({addOpen:false});
+  setForm = (k,v) => this.setState(s=>({form:{...s.form,[k]:v}}));
+  addFormTag = t => this.setState(s=>({form:{...s.form,tags:[...(Array.isArray(s.form.tags)?s.form.tags:[]).filter(x=>x!==t),t]}}));
+  removeFormTag = t => this.setState(s=>({form:{...s.form,tags:(s.form.tags||[]).filter(x=>x!==t)}}));
+  setFormTagDraft = e => this.setState({formTagDraft:e.target.value});
+  openFormCustom = () => this.setState({formCustomOpen:true, formTagDraft:''});
+  closeFormCustom = () => this.setState({formCustomOpen:false});
+  addFormCustom = () => { const v=(this.state.formTagDraft||'').trim(); if(!v) return; this.registerCustomTag(v); this.setState({formTagDraft:''}); };
+  submitAdd = () => {
+    const f=this.state.form; const name=(f.name||'').trim(); if(!name) return;
+    const id='cust_'+Date.now().toString(36);
+    const color=this.MATCOLORS[this.state.custom.length % this.MATCOLORS.length];
+    const tags=(Array.isArray(f.tags)?f.tags:[]).map(t=>t.trim()).filter(Boolean);
+    const mat={id,name,note:f.note,family:(f.family||'Custom').trim()||'Custom',tags:tags.length?tags:['Custom'],
+      cas:'—',supplier:'Custom',dilution:100,ifra:(f.ifra!==''&&f.ifra!=null&&!isNaN(parseFloat(f.ifra)))?parseFloat(f.ifra):null,usage:(f.usage!==''&&f.usage!=null&&!isNaN(parseFloat(f.usage)))?parseFloat(f.usage):null,
+      price:(f.price!==''&&f.price!=null&&!isNaN(parseFloat(f.price)))?parseFloat(f.price):null,priceAmt:parseFloat(f.priceAmt)||5,
+      cost:1,density:0.95,strength:6,tenacity:6,diffusion:6,color,
+      desc:'Custom material added to your library.',rel:null};
+    this.setState(s=>{ const custom=[...s.custom,mat]; this.save('sillage_custom_v1',custom); return {custom,addOpen:false,search:name}; });
+  };
+
+  // board
+  addBox = (note) => this.setState(s=>{ const board=[...s.board,{id:this.uid(),label:'',note:note||'Top'}]; this.save('sillage_board_v1',board); return {board}; });
+  renameBox = (id,label) => this.setState(s=>{ const board=s.board.map(b=>b.id===id?{...b,label}:b); this.save('sillage_board_v1',board); return {board}; });
+  removeBox = (id) => this.setState(s=>{ const board=s.board.filter(b=>b.id!==id); this.save('sillage_board_v1',board); return {board}; });
+
+  toggleTheme = () => this.setState(s=>{ const order=['night','t1','t2','t3','pop']; const i=order.indexOf(s.theme); const t=order[(i+1)%order.length]; this.save('sillage_theme_v1',t); return {theme:t}; });
+  openSettings = () => this.setState({settingsOpen:true, menuOpen:false});
+  closeSettings = () => this.setState({settingsOpen:false});
+  setSetting = (k,v) => this.setState(s=>{ const settings={...s.settings,[k]:v}; this.save('sillage_settings_v1',settings); return {settings}; });
+  toggleSetting = k => this.setState(s=>{ const settings={...s.settings,[k]:s.settings[k]===false?true:false}; this.save('sillage_settings_v1',settings); return {settings}; });
+  toggleMenu = () => this.setState(s=>({menuOpen:!s.menuOpen}));
+  closeMenu = () => this.setState({menuOpen:false});
+  saveRecipe = () => this.setState(s=>{
+    const name=(s.name||'').trim()||'Untitled';
+    const idx=s.saved.findIndex(x=>x.name.toLowerCase()===name.toLowerCase());
+    const rec={id:idx>=0?s.saved[idx].id:'r'+Date.now().toString(36), name, notes:s.notes, rows:s.rows, board:s.board, ts:Date.now()};
+    let saved; if(idx>=0){ saved=s.saved.slice(); saved[idx]=rec; } else saved=[rec,...s.saved];
+    this.save('sillage_recipes_v1',saved);
+    return {saved};
+  });
+  loadRecipe = id => this.setState(s=>{ const r=s.saved.find(x=>x.id===id); if(!r) return null; this.save('sillage_board_v1',r.board||[]); return {name:r.name, notes:r.notes||'', rows:r.rows||[], board:r.board||[], menuOpen:false, detailId:null}; });
+  newComposition = () => { this.save('sillage_board_v1',[]); this.setState({name:'', notes:'', rows:[], board:[], menuOpen:false, detailId:null, search:''}); };
+  deleteRecipe = id => this.setState(s=>{ const saved=s.saved.filter(x=>x.id!==id); this.save('sillage_recipes_v1',saved); return {saved}; });
+  resizeNotes(){ const el=this.notesRef.current; if(el){ el.style.height='auto'; el.style.height=el.scrollHeight+'px'; } }
+  componentDidMount(){ this.resizeNotes(); }
+  componentDidUpdate(pp,ps){ if(ps.notes!==this.state.notes) this.resizeNotes(); }
+  setName = (e) => { const v=e.target.value; this.setState({name:v}); };
+  setNotes = (e) => { const el=e.target; el.style.height='auto'; el.style.height=el.scrollHeight+'px'; this.setState({notes:el.value}); };
+
+  compute(){
+    const rows = this.state.rows.map(r=>({...r, ing:this.ing(r.id)})).filter(r=>r.ing);
+    const total = rows.reduce((a,r)=>a+r.weight,0)||0;
+    rows.forEach(r=>{ r.pct = total? r.weight/total*100:0; r.ifraExceed = r.ing.ifra!=null && r.pct>r.ing.ifra; });
+    const order=['Top','Middle','Base'];
+    const labels={Top:'Top Notes',Middle:'MIDDLE Notes',Base:'Base Notes'};
+    const secWeight={Top:0,Middle:0,Base:0};
+    rows.forEach(r=>{ const cls=r.override||r.ing.note; secWeight[cls]=(secWeight[cls]||0)+r.weight; });
+    const raw={}; this.CHARS.forEach(c=>raw[c]=0);
+    rows.forEach(r=>{ r.ing.tags.forEach(t=>{ if(raw[t]!=null) raw[t]+= r.pct*(r.ing.strength/10); }); });
+    const accords = this.ACCORDS.map(a=>{ const present=a.set.filter(id=>rows.some(r=>r.id===id)); return {...a,count:present.length}; }).filter(a=>a.count>=a.th);
+    return {rows,total,secWeight,order,labels,raw,accords};
+  }
+
+  arc(a0,a1){ const r=72,cx=80,cy=80; const p=a=>[cx+r*Math.cos(a),cy+r*Math.sin(a)]; const [x0,y0]=p(a0),[x1,y1]=p(a1); const large=(a1-a0)>Math.PI?1:0; if(a1-a0>=Math.PI*2-1e-4) return `M${cx-r},${cy} A${r},${r} 0 1 1 ${cx+r},${cy} A${r},${r} 0 1 1 ${cx-r},${cy} Z`; return `M${cx},${cy} L${x0.toFixed(2)},${y0.toFixed(2)} A${r},${r} 0 ${large} 1 ${x1.toFixed(2)},${y1.toFixed(2)} Z`; }
+  pieFrom(entries){ const tot=entries.reduce((a,e)=>a+e.v,0)||1; let ang=-Math.PI/2; return entries.map(e=>{ const slice=e.v/tot*Math.PI*2; const d=this.arc(ang,ang+slice); ang+=slice; return {d,color:e.color,label:e.label,pct:Math.round(e.v/tot*100)}; }); }
+
+  relBlocks(ing){
+    if(!ing.rel) return [];
+    const out=[];
+    if(ing.rel.pairs) out.push({title:'Pairs well with',items:ing.rel.pairs,color:'#b8aef0'});
+    if(ing.rel.ratios) out.push({title:'Popular ratios',items:ing.rel.ratios,color:'#d6a45c'});
+    if(ing.rel.boosts) out.push({title:'Boosts',items:ing.rel.boosts,color:'#8fae7f'});
+    if(ing.rel.softens) out.push({title:'Softens',items:ing.rel.softens,color:'#7fb0ba'});
+    if(ing.rel.replace) out.push({title:'Can replace with',items:ing.rel.replace,color:'#bda99a'});
+    if(ing.rel.conflicts) out.push({title:'Conflicts',items:ing.rel.conflicts,color:'#e08b84'});
+    return out;
+  }
+
+  renderVals(){
+    const st = this.state.settings||{};
+    const cur = ({USD:'$',GBP:'£',EUR:'€'})[st.currency||'USD']||'$';
+    const showAccords = (this.props.showAccords ?? true) && (st.showAccords!==false);
+    const showScentBars = (this.props.showScentBars ?? true) && (st.showScent!==false);
+    const showCost = (this.props.showCost ?? true) && (st.showCost!==false);
+    const showBoard = (this.props.showBoard ?? true) && (st.showBoard!==false);
+    const showNotes = st.showNotes!==false;
+    const boardWrapClass = (this.props.boardColumns==='Side by side') ? 'sl-board-cols' : '';
+    const c = this.compute();
+    const {rows,total,secWeight,order,labels,raw,accords}=c;
+    const gridCols = showCost ? 'minmax(110px,1fr) 84px 62px 46px 30px' : 'minmax(120px,1fr) 96px 58px 34px';
+
+    const q=this.state.search.trim().toLowerCase();
+    const terms=q.split(/\s+/).filter(Boolean);
+    const lib=this.library();
+    let matches=lib.filter(ing=>{ const hay=(ing.name+' '+ing.family+' '+ing.tags.join(' ')).toLowerCase(); return terms.every(t=>hay.includes(t)); });
+    const results = matches.map(ing=>({name:ing.name,color:ing.color,
+      tagline:ing.tags.slice(0,3).join(' · '),noteShort:ing.note,
+      onAdd:()=>this.addIng(ing.id), onDelete:()=>this.deleteMaterial(ing.id)}));
+    const showResults = q.length>0;
+    const canCreate = q.length>0 && !lib.some(x=>x.name.toLowerCase()===q);
+    const resultHint = matches.length? `${matches.length} material${matches.length===1?'':'s'}` : 'No matches';
+
+    const secColor={Top:'#d8c6ac',Middle:'#c39a72',Base:'#8f7256'};
+    const sections = order.map(cls=>{
+      const srows = rows.filter(r=>(r.override||r.ing.note)===cls).map(r=>({
+        name:r.ing.name,family:r.ing.family,color:r.ing.color,weight:(r.weightRaw!=null?r.weightRaw:(r.weight===0?'':r.weight)),
+        pct:this.fmt(r.pct)+'%',cost:(()=>{const c=this.rowCost(r.ing,r.weight);return c==null?'—':cur+c.toFixed(2);})(),ifraExceed:r.ifraExceed,ifraTitle:`Exceeds IFRA ${r.ing.ifra}% (now ${this.fmt(r.pct)}%)`,
+        onWeight:e=>this.onWeight(r.rid,e),onRemove:()=>this.onRemove(r.rid),onOpen:()=>this.openDetail(r.id)}));
+      const pct = total? Math.round(secWeight[cls]/total*100):0;
+      return {label:labels[cls],labelLower:labels[cls].toLowerCase(),color:secColor[cls],rows:srows,count:srows.length,pct,
+        empty:srows.length===0,visible: srows.length>0 || true};
+    });
+
+    // board — grouped into Top / Middle / Base columns
+    const boardCols=[{note:'Top',label:'Top Notes'},{note:'Middle',label:'Middle Notes'},{note:'Base',label:'Base Notes'}].map(nc=>({
+      label:nc.label, note:nc.note, onAdd:()=>this.addBox(nc.note),
+      boxes:(this.state.board||[]).filter(b=>(b.note||'Top')===nc.note).map(b=>({slotId:b.id,label:b.label,
+        onRename:e=>this.renameBox(b.id,e.target.value), onRemove:()=>this.removeBox(b.id)}))}));
+
+    const notePieData=[
+      {label:'Top',v:secWeight.Top,color:'#d8c6ac'},
+      {label:'Heart',v:secWeight.Middle,color:'#c39a72'},
+      {label:'Base',v:secWeight.Base,color:'#8f7256'},
+    ].filter(e=>e.v>0);
+    const notePie=this.pieFrom(notePieData);
+    const noteLegend=notePie.map((s,i)=>({label:notePieData[i].label,color:s.color,pct:s.pct}));
+    const noteTopPct = total?Math.round(secWeight.Top/total*100):0;
+    const hv=this.state.hoverPie;
+    const attachHover=(arr,c)=>arr.map(s=>({...s,
+      onEnter:()=>this.setState({hoverPie:{c,label:s.label,pct:s.pct}}),
+      onLeave:()=>this.setState(st=>st.hoverPie&&st.hoverPie.c===c&&st.hoverPie.label===s.label?{hoverPie:null}:null)}));
+    const noteCenterMain=(hv&&hv.c==='note')?hv.pct+'%':noteTopPct+'%';
+    const noteCenterSub=(hv&&hv.c==='note')?hv.label:'top';
+
+    const charEntries=Object.entries(raw).filter(([k,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+    const maxRaw=charEntries.length?charEntries[0][1]:1;
+    const scentBars=charEntries.slice(0,8).map(([k,v])=>({tag:k,pct:Math.round(v/maxRaw*88+6),color:this.TAGCOLOR[k]||'#9ea0a8'}));
+    const topChars=charEntries.slice(0,6);
+    const scentPieData=topChars.map(([k,v])=>({label:k,v,color:this.TAGCOLOR[k]||'#9ea0a8'}));
+    const scentPie=this.pieFrom(scentPieData);
+    const scentLegend=scentPie.slice(0,4).map((s,i)=>({label:scentPieData[i].label,color:s.color,pct:s.pct}));
+    const scentTopLabel=topChars.length?topChars[0][0]:'—';
+    const scentCenterMain=(hv&&hv.c==='scent')?hv.label:scentTopLabel;
+    const scentCenterSub=(hv&&hv.c==='scent')?hv.pct+'%':'dominant';
+
+    const accordVals=accords.map(a=>({name:a.name,dot:a.hue,
+      bg:'color-mix(in srgb,'+a.hue+' 16%,#0f0f11)',color:a.hue}));
+
+    // add dialog note choices
+    const noteChoices=this.NOTE_CLASSES.map(n=>{ const sel=this.state.form.note===n; return {label:n,
+      onPick:()=>this.setForm('note',n),
+      bg:sel?'color-mix(in srgb,var(--color-accent) 20%,transparent)':'transparent',
+      border:sel?'var(--color-accent)':'var(--color-divider)',
+      color:sel?'var(--color-accent-300)':'var(--color-neutral-400)'};});
+
+    const ALLTAGS=[...Object.keys(this.TAGCOLOR),...this.state.customTags.filter(t=>!this.TAGCOLOR[t])].filter(t=>!this.state.hiddenTags.includes(t));
+    const editList = [...lib].sort((a,b)=>a.name.localeCompare(b.name)).map(m=>{ const cur=m.tags||[]; const exp=!!(this.state.editExpanded||{})[m.id]; return {id:m.id,name:m.name,color:m.color,family:m.family||'',
+      expanded:exp, onToggleExpand:()=>this.toggleEditExpand(m.id), caret:exp?'rotate(180deg)':'rotate(0deg)',
+      ifraStr:(m.ifra!=null?m.ifra:''), usageStr:(m.usage!=null?m.usage:''),
+      tagsList:cur.map(t=>({name:t,color:this.TAGCOLOR[t]||'#9ea0a8',onRemove:()=>this.removeTag(m.id,t,cur)})),
+      availableTags:ALLTAGS.filter(t=>!cur.includes(t)).map(t=>({name:t,onAdd:()=>this.addTag(m.id,t,cur),onDelete:()=>this.deletePaletteTag(t)})),
+      pickerOpen:this.state.tagPickerId===m.id, onTogglePicker:()=>this.toggleTagPicker(m.id),
+      onCustomKey:e=>{ if(e.key==='Enter'){ e.preventDefault(); this.addCustomTag(); } },
+      notes:this.NOTE_CLASSES.map(n=>{ const sel=m.note===n; return {label:n, onPick:()=>this.editMaterial(m.id,{note:n}),
+        bg:sel?'color-mix(in srgb,var(--color-accent) 20%,transparent)':'transparent',
+        border:sel?'var(--color-accent)':'var(--color-divider)',
+        color:sel?'var(--color-accent-300)':'var(--color-neutral-400)'};}),
+      onName:e=>this.editMaterial(m.id,{name:e.target.value}),
+      onFamily:e=>this.editMaterial(m.id,{family:e.target.value}),
+      onTags:e=>this.editMaterial(m.id,{tags:e.target.value.split(',').map(t=>t.trim()).filter(Boolean)}),
+      onIfra:e=>{ const v=e.target.value; this.editMaterial(m.id,{ifra:(v!==''&&!isNaN(parseFloat(v)))?parseFloat(v):null}); },
+      onUsage:e=>{ const v=e.target.value; this.editMaterial(m.id,{usage:(v!==''&&!isNaN(parseFloat(v)))?parseFloat(v):null}); },
+      onDelete:()=>this.deleteMaterial(m.id)}; });
+    const eq=(this.state.editSearch||'').trim().toLowerCase();
+    const editListFiltered = eq? lib.filter(m=>((m.name+' '+(m.family||'')+' '+(m.tags||[]).join(' ')).toLowerCase().includes(eq))).map(m=>m.id) : null;
+    const editListShown = editListFiltered? editList.filter(e=>editListFiltered.includes(e.id)) : editList;
+
+    let detail=null;
+    if(this.state.detailId){ const ing=this.ing(this.state.detailId); if(ing){
+      detail={name:ing.name,family:ing.family,note:ing.note+' note',color:ing.color,desc:ing.desc,tags:ing.tags,
+        specs:[{k:'CAS',v:ing.cas},{k:'Supplier',v:ing.supplier},{k:'Dilution',v:ing.dilution+'%'},
+          {k:'IFRA max',v:ing.ifra!=null?ing.ifra+'%':'—'},{k:'Cost / g',v:'$'+ing.cost.toFixed(2)},{k:'Density',v:ing.density},
+          {k:'Strength',v:ing.strength+'/10'},{k:'Tenacity',v:ing.tenacity+'/10'},{k:'Diffusion',v:ing.diffusion+'/10'}],
+        relations:this.relBlocks(ing),onAdd:()=>{this.addIng(ing.id);this.closeDetail();}};
+    }}
+
+    return {
+      formulaName:this.state.name, headerName:this.state.name.trim()||'Untitled', search:this.state.search, gridCols, showAccords, showScentBars,
+      onFormulaName:this.setName,
+      notes:this.state.notes, onNotes:this.setNotes, notesRef:this.notesRef,
+      tagDraft:this.state.tagDraft, onTagDraft:this.setTagDraft, customOpen:this.state.customOpen, notCustomOpen:!this.state.customOpen, onOpenCustom:this.openCustom, onCloseCustom:this.closeCustom,
+      onToggleTheme:this.toggleTheme,
+      rootClass:{night:'',t1:'sl-theme-t1',t2:'sl-theme-t2',t3:'sl-theme-t3',pop:'sl-theme-pop'}[this.state.theme]||'',
+      themeToggleTitle:'Switch to '+({night:'Sand',t1:'Forest',t2:'Pastel',t3:'Vivid',pop:'Midnight'}[this.state.theme]||'Midnight')+' theme',
+      onToggleMenu:this.toggleMenu, onCloseMenu:this.closeMenu, menuOpen:this.state.menuOpen,
+      onSave:this.saveRecipe, onNew:this.newComposition, noSaved:this.state.saved.length===0,
+      savedList:this.state.saved.map(r=>({name:r.name, meta:(r.rows?r.rows.length:0)+' materials', onLoad:()=>this.loadRecipe(r.id), onDelete:()=>this.deleteRecipe(r.id)})),
+      totalWeight:this.fmt(total), materialCount:rows.length,
+      results, showResults, showEmptyState:!showResults, canCreate, resultHint,
+      onOpenAdd:()=>this.openAdd(''), onCreateFromSearch:()=>this.openAdd(this.state.search.trim()),
+      onOpenEdit:this.openEdit, onCloseEdit:this.closeEdit, editOpen:this.state.editOpen, editList:editListShown, editCount:lib.length+' materials', onAddFromEdit:()=>this.openAdd(''),
+      editSearch:this.state.editSearch||'', onEditSearch:e=>this.setState({editSearch:e.target.value}),
+      addOpen:this.state.addOpen, form:this.state.form, noteChoices, stop:this.stop,
+      onCloseAdd:this.closeAdd, onSubmitAdd:this.submitAdd,
+      onFormName:e=>this.setForm('name',e.target.value), onFormFamily:e=>this.setForm('family',e.target.value), onFormTags:e=>this.setForm('tags',e.target.value),
+      formTagsList:(Array.isArray(this.state.form.tags)?this.state.form.tags:[]).map(t=>({name:t,color:this.TAGCOLOR[t]||'#9ea0a8',onRemove:()=>this.removeFormTag(t)})),
+      formHasTags:(Array.isArray(this.state.form.tags)?this.state.form.tags:[]).length>0,
+      formAvailTags:ALLTAGS.filter(t=>!(Array.isArray(this.state.form.tags)?this.state.form.tags:[]).includes(t)).map(t=>({name:t,onAdd:()=>this.addFormTag(t),onDelete:()=>this.deletePaletteTag(t)})),
+      formTagDraft:this.state.formTagDraft||'', onFormTagDraft:this.setFormTagDraft,
+      formCustomOpen:!!this.state.formCustomOpen, notFormCustomOpen:!this.state.formCustomOpen,
+      onOpenFormCustom:this.openFormCustom, onCloseFormCustom:this.closeFormCustom, onAddFormCustom:this.addFormCustom,
+      onFormCustomKey:e=>{ if(e.key==='Enter'){ e.preventDefault(); this.addFormCustom(); } },
+      onFormIfra:e=>this.setForm('ifra',e.target.value), onFormUsage:e=>this.setForm('usage',e.target.value),
+      onFormPrice:e=>this.setForm('price',e.target.value), onFormPriceAmt:e=>this.setForm('priceAmt',e.target.value),
+      priceAmtOptions:[{v:'1',label:'per 1 g'},{v:'5',label:'per 5 g'},{v:'10',label:'per 10 g'},{v:'15',label:'per 15 g'},{v:'20',label:'per 20 g'},{v:'25',label:'per 25 g'},{v:'50',label:'per 50 g'},{v:'100',label:'per 100 g'},{v:'1000',label:'per 1 kg'}],
+      totalCost:(()=>{const t=rows.reduce((a,r)=>{const c=this.rowCost(r.ing,r.weight);return a+(c||0);},0);return cur+t.toFixed(2);})(),
+      sections, accords:accordVals, noAccords:accordVals.length===0, boardCols, showCost, showBoard, showNotes, boardWrapClass,
+      settingsOpen:this.state.settingsOpen, onOpenSettings:this.openSettings, onCloseSettings:this.closeSettings,
+      settingsToggles:[{key:'showCost',label:'Cost columns'},{key:'showBoard',label:'Ingredient board'},{key:'showNotes',label:'Notes'},{key:'showAccords',label:'Accords · related materials'},{key:'showScent',label:'Scent profile'}].map(o=>{const on=st[o.key]!==false;return {label:o.label,onToggle:()=>this.toggleSetting(o.key),track:on?'var(--color-accent)':'var(--color-divider)',knob:on?'translateX(16px)':'translateX(0)'};}),
+      currencyOptions:[{v:'USD',label:'$ Dollars'},{v:'GBP',label:'£ Pounds'},{v:'EUR',label:'€ Euros'}].map(o=>{const sel=(st.currency||'USD')===o.v;return {label:o.label,onPick:()=>this.setSetting('currency',o.v),bg:sel?'color-mix(in srgb,var(--color-accent) 20%,transparent)':'transparent',border:sel?'var(--color-accent)':'var(--color-divider)',color:sel?'var(--color-accent-300)':'var(--color-neutral-400)'};}),
+      notePie:attachHover(notePie,'note'), noteLegend, noteTopPct, noteCenterMain, noteCenterSub,
+      scentPie:attachHover(scentPie,'scent'), scentLegend, scentTopLabel, scentCenterMain, scentCenterSub,
+      scentBars,
+      detail, onSearch:this.onSearch, onCloseDetail:this.closeDetail,
+    };
+  }
+}
+</script>
+</body>
+</html>
